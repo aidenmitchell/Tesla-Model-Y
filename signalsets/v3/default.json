@@ -4,87 +4,15 @@
       "hdr": "7E0",
       "rax": "7E8",
       "cmd": {"22": "203E"},
-      "freq": 1,
+      "freq": 5,
       "signals": [
         {
-          "id": "TESLA_UDS_203E",
-          "name": "UDS PID 203E",
-          "path": "Diagnostics",
+          "id": "TESLA_TEST_PID",
+          "name": "Test PID 203E",
+          "path": "Test",
           "fmt": {
-            "len": 32,
-            "max": 4294967295,
-            "unit": "raw"
-          }
-        }
-      ]
-    },
-    {
-      "hdr": "7E0",
-      "rax": "7E8",
-      "cmd": {"22": "2040"},
-      "freq": 1,
-      "signals": [
-        {
-          "id": "TESLA_UDS_2040",
-          "name": "UDS PID 2040",
-          "path": "Diagnostics",
-          "fmt": {
-            "len": 32,
-            "max": 4294967295,
-            "unit": "raw"
-          }
-        }
-      ]
-    },
-    {
-      "hdr": "7E0",
-      "rax": "7E8",
-      "cmd": {"22": "2041"},
-      "freq": 1,
-      "signals": [
-        {
-          "id": "TESLA_UDS_2041",
-          "name": "UDS PID 2041",
-          "path": "Diagnostics",
-          "fmt": {
-            "len": 64,
-            "max": 18446744073709551615,
-            "unit": "raw"
-          }
-        }
-      ]
-    },
-    {
-      "hdr": "7E0",
-      "rax": "7E8",
-      "cmd": {"22": "2044"},
-      "freq": 1,
-      "signals": [
-        {
-          "id": "TESLA_UDS_2044",
-          "name": "UDS PID 2044",
-          "path": "Diagnostics",
-          "fmt": {
-            "len": 32,
-            "max": 4294967295,
-            "unit": "raw"
-          }
-        }
-      ]
-    },
-    {
-      "hdr": "7E0",
-      "rax": "7E8",
-      "cmd": {"22": "2048"},
-      "freq": 1,
-      "signals": [
-        {
-          "id": "TESLA_UDS_2048",
-          "name": "UDS PID 2048",
-          "path": "Diagnostics",
-          "fmt": {
-            "len": 64,
-            "max": 18446744073709551615,
+            "len": 16,
+            "max": 65535,
             "unit": "raw"
           }
         }
