@@ -1,20 +1,123 @@
 {
   "commands": [
     {
-      "hdr": "7E0",
-      "rax": "7E8",
-      "cmd": {"22": "203E"},
-      "freq": 5,
+      "hdr": "292",
+      "cmd": "01",
+      "freq": 10,
       "signals": [
         {
-          "id": "TESLA_TEST_PID",
-          "name": "Test PID 203E",
-          "path": "Test",
+          "id": "TESLA_SOC_MIN",
+          "name": "SOC Min",
+          "path": "Battery",
           "fmt": {
-            "len": 16,
-            "max": 65535,
-            "unit": "raw"
+            "len": 10,
+            "bix": 0,
+            "max": 102.3,
+            "unit": "%",
+            "div": 10
+          },
+          "suggestedMetric": "SOC Min"
+        },
+        {
+          "id": "TESLA_SOC_UI",
+          "name": "SOC Display",
+          "path": "Battery",
+          "fmt": {
+            "len": 10,
+            "bix": 10,
+            "max": 102.3,
+            "unit": "%",
+            "div": 10
+          },
+          "suggestedMetric": "Battery SOC"
+        },
+        {
+          "id": "TESLA_SOC_AVE",
+          "name": "SOC Average",
+          "path": "Battery",
+          "fmt": {
+            "len": 10,
+            "bix": 30,
+            "max": 102.3,
+            "unit": "%",
+            "div": 10
           }
+        },
+        {
+          "id": "TESLA_SOC_MAX",
+          "name": "SOC Max",
+          "path": "Battery",
+          "fmt": {
+            "len": 10,
+            "bix": 20,
+            "max": 102.3,
+            "unit": "%",
+            "div": 10
+          }
+        }
+      ]
+    },
+    {
+      "hdr": "257",
+      "cmd": "01",
+      "freq": 20,
+      "signals": [
+        {
+          "id": "TESLA_VEHICLE_SPEED",
+          "name": "Vehicle Speed",
+          "path": "Drivetrain",
+          "fmt": {
+            "len": 12,
+            "bix": 12,
+            "max": 285,
+            "min": -40,
+            "unit": "km/h",
+            "mul": 0.08,
+            "add": -40
+          },
+          "suggestedMetric": "Speed"
+        }
+      ]
+    },
+    {
+      "hdr": "212",
+      "cmd": "01",
+      "freq": 10,
+      "signals": [
+        {
+          "id": "TESLA_BMS_STATE",
+          "name": "BMS State",
+          "path": "Battery",
+          "fmt": {
+            "len": 4,
+            "bix": 32,
+            "max": 10,
+            "unit": "enum"
+          }
+        },
+        {
+          "id": "TESLA_CONTACTOR_STATE",
+          "name": "Contactor State",
+          "path": "Battery",
+          "fmt": {
+            "len": 3,
+            "bix": 8,
+            "max": 6,
+            "unit": "enum"
+          }
+        },
+        {
+          "id": "TESLA_ISOLATION_RESISTANCE",
+          "name": "Isolation Resistance",
+          "path": "Battery",
+          "fmt": {
+            "len": 10,
+            "bix": 19,
+            "max": 10000,
+            "unit": "kOhm",
+            "mul": 10
+          },
+          "suggestedMetric": "Isolation Resistance"
         }
       ]
     }
